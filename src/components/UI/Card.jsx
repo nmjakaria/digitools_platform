@@ -52,7 +52,7 @@ const Card = ({ product, selectedProducts, setSelectedProducts }) => {
                 <div className="flex items-baseline gap-1 mb-8">
                     <span className="text-3xl font-black text-[#111827]">${price}</span>
                     <span className="text-[#9CA3AF] font-medium text-sm capitalize">
-                        /{period === 'monthly' ? 'Mo' : period}
+                        / {period === 'monthly' ? 'Monthly' : period}
                     </span>
                 </div>
 
