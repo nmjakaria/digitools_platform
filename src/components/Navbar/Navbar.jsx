@@ -3,8 +3,8 @@ import React from 'react';
 
 const Navbar = ({ selectedProducts, setSelectedType }) => {
     return (
-        <div className='container mx-auto'>
-            <div className="navbar bg-base-150 px-4 md:px-8 py-4 rounded-xl shadow-sm">
+        <div className='container mx-auto sticky top-0 z-50'>
+            <div className="navbar bg-white backdrop-blur-md bg-white/80 border-b border-gray-100 px-4 md:px-8 py-4 rounded-xl shadow-sm">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
