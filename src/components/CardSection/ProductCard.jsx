@@ -1,10 +1,10 @@
-import React, { use, useState } from 'react';
+import React, { use } from 'react';
 import AllProducts from './AllProducts';
 import CartProduct from './CartProduct';
 
-const ProductCard = ({ productsPromise, selectedProducts, setSelectedProducts }) => {
+const ProductCard = ({ productsPromise, selectedProducts, setSelectedProducts, selectedType, setSelectedType }) => {
     const products = use(productsPromise);
-    const [selectedType, setSelectedType] = useState("products");
+
     return (
         <div className='container mx-auto'>
             <div className='mb-4 text-center space-y-4'>

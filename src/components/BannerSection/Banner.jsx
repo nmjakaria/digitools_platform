@@ -9,7 +9,7 @@ const Banner = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
 
                     {/* Left Content */}
-                    <div className="space-y-6 md:space-y-8 max-w-xl">
+                    <div className="order-2 md:order-1 space-y-6 md:space-y-8 max-w-xl">
                         <div className="inline-flex items-center gap-3 bg-[#E8EDFF] px-4 py-2 rounded-full border border-[#D0D9FF]">
                             <div className="relative flex items-center justify-center w-6 h-6">
                                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#8B5CF6] opacity-30"></span>
@@ -42,7 +42,7 @@ const Banner = () => {
                     </div>
 
                     {/* Right Image */}
-                    <div className="flex justify-center md:justify-end">
+                    <div className="order-1 md:order-2 flex justify-center md:justify-end">
                         <img
                             src={BannerImage}
                             alt="Banner"

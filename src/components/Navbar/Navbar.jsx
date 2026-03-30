@@ -1,7 +1,7 @@
 import { Logs, ShoppingCart } from 'lucide-react';
 import React from 'react';
 
-const Navbar = ({selectedProducts}) => {
+const Navbar = ({ selectedProducts, setSelectedType }) => {
     return (
         <div className='container mx-auto'>
             <div className="navbar bg-base-150 px-4 md:px-8 py-4 rounded-xl shadow-sm">
@@ -49,7 +49,7 @@ const Navbar = ({selectedProducts}) => {
                                 <span className="text-lg font-bold"> {selectedProducts.length} </span>
                                 <span className="text-info">Subtotal: ${selectedProducts.reduce((total, product) => total + product.price, 0)} </span>
                                 <div className="card-actions">
-                                    <button className="btn bg-[#7C3AED] text-white btn-block">View cart</button>
+                                    <button onClick={() => setSelectedType('Card')} className="btn bg-[#7C3AED] text-white btn-block">View cart</button>
                                 </div>
                             </div>
                         </div>
