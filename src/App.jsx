@@ -7,6 +7,7 @@ import { ThreeCircles } from 'react-loader-spinner'
 import ProductCard from './components/CardSection/ProductCard'
 import { ToastContainer } from 'react-toastify'
 import Rating from './components/Rating/Rating'
+import GetStartedSteps from './components/GetStartedSteps/GetStartedSteps'
 
 const fetchProducts = async () => {
   const res = await fetch('/productCardInfo.json');
@@ -21,7 +22,7 @@ function App() {
   return (
     <>
       <Navbar selectedProducts={selectedProducts}
-      setSelectedType={setSelectedType} ></Navbar>
+        setSelectedType={setSelectedType} ></Navbar>
       <Banner></Banner>
       <Rating></Rating>
       <Suspense fallback={
@@ -36,6 +37,15 @@ function App() {
           selectedType={selectedType}
           setSelectedType={setSelectedType}
         ></ProductCard>
+      </Suspense>
+
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center py-20">
+            <ThreeCircles height={80} width={80} color="#4fa94d" />
+          </div>
+        }>
+        <GetStartedSteps></GetStartedSteps>
       </Suspense>
 
       <ToastContainer></ToastContainer>
