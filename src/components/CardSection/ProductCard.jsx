@@ -2,7 +2,7 @@ import React, { use, useState } from 'react';
 import AllProducts from './AllProducts';
 import CartProduct from './CartProduct';
 
-const ProductCard = ({ productsPromise }) => {
+const ProductCard = ({ productsPromise, selectedProducts, setSelectedProducts }) => {
     const products = use(productsPromise);
     const [selectedType, setSelectedType] = useState("products");
     return (
@@ -19,13 +19,17 @@ const ProductCard = ({ productsPromise }) => {
                 selectedType === "products" ? (
                     <AllProducts products={products}
                         selectedType={selectedType}
-                        setSelectedType={setSelectedType}></AllProducts>
+                        setSelectedType={setSelectedType}
+                        selectedProducts={selectedProducts}
+                        setSelectedProducts={setSelectedProducts} ></AllProducts>
                 ) :
                     (
                         <CartProduct
                             products={products}
                             selectedType={selectedType}
-                            setSelectedType={setSelectedType}></CartProduct>
+                            setSelectedType={setSelectedType}
+                            selectedProducts={selectedProducts}
+                            setSelectedProducts={setSelectedProducts} ></CartProduct>
                     )
             }
         </div>

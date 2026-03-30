@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Sparkles, Check } from 'lucide-react';
+import { Slide, toast } from 'react-toastify';
 
-const Card = ({ product }) => {
-    console.log(product);
+const Card = ({ product, selectedProducts, setSelectedProducts }) => {
     const { name, description, price, period, tag, tagType, features, icon } = product;
+    const [isSelected, setIsSelected] = useState(false);
+    const hendleChooseProduct = () => {
+
+        toast.success(`${name} added for $${price}`, {
+            position: "top-right",
+            theme: "dark",
+            autoClose: 3000,
+            transition: Slide,
+        });
+        setIsSelected(true);
+        setSelectedProducts([...selectedProducts, product]);
+    }
 
     // Logic for Tag Colors
     const getTagStyles = (type) => {
@@ -61,8 +73,11 @@ const Card = ({ product }) => {
             <div className="mt-auto">
                 <button className="w-full py-4 rounded-2xl font-bold text-white shadow-lg transition-all duration-300 
                     bg-linear-to-l from-[#4F39F6] to-[#9514FA] 
-                    hover:shadow-purple-500/40 hover:-translate-y-1 active:scale-95">
-                    Buy Now
+                    hover:shadow-purple-500/40 hover:-translate-y-1 active:scale-95"
+                    onClick={hendleChooseProduct}>
+                    {
+                        !isSelected ? "Buy Now" : "Product Added"
+                    }
                 </button>
             </div>
         </div>
