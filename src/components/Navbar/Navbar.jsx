@@ -59,7 +59,7 @@ const Navbar = ({ selectedProducts, setSelectedType }) => {
                         Login
                     </button>
 
-                    <button className="bg-linear-to-l from-[#4F39F6] to-[#9514FA] text-white font-semibold px-8 py-3 rounded-full shadow-md hover:bg-[#6D28D9] hover:shadow-lg hover:shadow-purple-500/30 hover:-translate-y-0.5 active:scale-95 transition">
+                    <button className="bg-linear-to-l from-[#9514FA] to-[#4F39F6] text-white font-semibold px-8 py-3 rounded-full shadow-md hover:bg-[#6D28D9] hover:shadow-lg hover:shadow-purple-500/30 hover:-translate-y-0.5 active:scale-95 transition">
                         Get Started
                     </button>
                 </div>

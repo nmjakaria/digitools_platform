@@ -1,11 +1,13 @@
 import React from 'react';
-import { MdOutlinePersonAddAlt } from 'react-icons/md';
+import { FaCartShopping } from "react-icons/fa6";
+
 
 const EmptySelectedState = () => {
     return (
         <div className="flex flex-col items-center justify-center p-12 bg-gray-50 border-2 border-dashed border-gray-200 rounded-4xl text-center">
             <div className="bg-white p-6 rounded-full shadow-sm mb-6 text-gray-400">
-                <MdOutlinePersonAddAlt className="text-6xl" />
+                <FaCartShopping className="text-6xl" />
+               
             </div>
 
             <h2 className="text-2xl font-bold text-gray-800 mb-2">

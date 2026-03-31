@@ -8,14 +8,21 @@ import ProductCard from './components/CardSection/ProductCard'
 import { ToastContainer } from 'react-toastify'
 import Rating from './components/Rating/Rating'
 import GetStartedSteps from './components/GetStartedSteps/GetStartedSteps'
+import Pricing from './components/PricingSection/Pricing'
 
 const fetchProducts = async () => {
   const res = await fetch('/productCardInfo.json');
   return res.json();
 }
 
+const fetchPricingInfo = async () => {
+  const res = await fetch('/PricingCardInfo.json');
+  return res.json();
+}
+
 function App() {
   const productsPromise = fetchProducts();
+  const pricingPromise = fetchPricingInfo();
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [selectedType, setSelectedType] = useState("products");
 
@@ -46,6 +53,10 @@ function App() {
           </div>
         }>
         <GetStartedSteps></GetStartedSteps>
+      </Suspense>
+
+      <Suspense>
+        <Pricing pricingPromise={pricingPromise}></Pricing>
       </Suspense>
 
       <ToastContainer></ToastContainer>
