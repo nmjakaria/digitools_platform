@@ -28,7 +28,7 @@ const Card = ({ product, selectedProducts, setSelectedProducts }) => {
     };
 
     return (
-        <div className="card w-full bg-white border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-[2.5rem] p-8 relative flex flex-col h-full">
+        <div className="card w-full bg-white border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl p-8 relative flex flex-col h-full">
 
             <div className="flex justify-between items-start mb-6">
                 <div className="bg-[#F9FAFB] w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-sm border border-gray-50">
