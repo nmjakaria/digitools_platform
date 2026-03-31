@@ -20,7 +20,7 @@ This project leverages a modern tech stack to ensure performance and maintainabi
   * **Styling:** Tailwind CSS (Utility-first CSS) daisyUI (Faster, cleaner, easier
 Tailwind CSS development)
   * **Icons:** [Lucide React](https://lucide.dev/), [React Icons](https://react-icons.github.io/react-icons/)
-  **Notifications:** [React Toastify](https://www.npmjs.com/package/react-toastify) (Customized alerts)
+  * **Notifications:** [React Toastify](https://www.npmjs.com/package/react-toastify) (Customized alerts)
   * **Deployment:** Netlify
   * **Data Handling:** JSON-based dynamic rendering
 
