@@ -8,15 +8,11 @@ const CTASection = () => {
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
                     Ready To Transform Your Workflow?
                 </h2>
-
-                <div className="space-y-1 opacity-90">
-                    <p className="text-lg md:text-xl font-medium">
-                        Join thousands of professionals who are already using Digitools to work smarter.
-                    </p>
-                    <p className="text-lg md:text-xl font-medium">
-                        Start your free trial today.
-                    </p>
-                </div>
+                <p className="text-sm font-medium opacity-80 pt-2">
+                    Join thousands of professionals who are already using Digitools to work smarter.
+                    <br />
+                    Start your free trial today.
+                </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                     <button className="px-8 py-3.5 bg-white text-[#a855f7] font-bold rounded-full transition-all shadow-lg active:scale-95 hover:shadow-xl hover:-translate-y-0.5">
