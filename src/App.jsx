@@ -9,6 +9,8 @@ import { ToastContainer } from 'react-toastify'
 import Rating from './components/Rating/Rating'
 import GetStartedSteps from './components/GetStartedSteps/GetStartedSteps'
 import Pricing from './components/PricingSection/Pricing'
+import CTASection from './components/PricingSection/CTAsection'
+import Footer from './components/Footer/Footer'
 
 const fetchProducts = async () => {
   const res = await fetch('/productCardInfo.json');
@@ -58,6 +60,9 @@ function App() {
       <Suspense>
         <Pricing pricingPromise={pricingPromise}></Pricing>
       </Suspense>
+
+      <CTASection></CTASection>
+      <Footer></Footer>
 
       <ToastContainer></ToastContainer>
     </>

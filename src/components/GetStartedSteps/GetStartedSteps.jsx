@@ -43,7 +43,7 @@ const GetStartedSteps = () => {
                     {steps.map((step, index) => {
                         const { id, Icon, title, description } = step;
                         return (
-                            <div key={index} className="card w-full bg-white border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-[1.5rem] p-8 pt-12 relative flex flex-col items-center text-center">
+                            <div key={index} className="card w-full bg-white border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-3xl p-8 pt-12 relative flex flex-col items-center text-center">
                                 
                                 <div className="absolute top-6 right-6 w-9 h-9 rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] flex items-center justify-center shadow-lg shadow-purple-200">
                                     <span className="text-white font-bold text-sm tracking-widest">{id}</span>
